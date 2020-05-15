@@ -1,0 +1,46 @@
+/* ********************************* FOOTER ********************************* */
+
+.main-footer {
+  @include flexy();
+  > .name {
+    font-family: "Kaushan Script", cursive;
+    margin: 10px auto 10px 10px;
+  }
+  @media (min-width: $medium) {
+    margin-bottom: 10px;
+  }
+}
+.bttmnav {
+  @include flexy();
+  font-family: "Bree Serif", serif;
+  margin-top: 10px;
+  &-top {
+    @media (min-width: $medium) {
+      display: none; /* Hides back-to-top link on large screens */
+      &:hover {
+        color: #191970;
+      }
+    }
+  }
+
+  &-items {
+    display: none; /* Hides navigation links on small screens */
+    @media (min-width: $medium) {
+      /* footer navigation links */
+      display: inline-block;
+      color: initial;
+      margin: 10px;
+      margin-top: 0px;
+      &:hover {
+        color: $f-hover;
+      }
+    }
+  }
+}
+
+/* ***************************** HORIZONTAL LINE **************************** */
+
+hr {
+  border: $border;
+  box-shadow: $bx-shadow;
+}

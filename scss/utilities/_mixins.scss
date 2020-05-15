@@ -1,0 +1,30 @@
+// Centered
+
+@mixin center($size: null, $marg: null, $txt: null, $disp: null) {
+  width: $size;
+  margin: $marg;
+  text-align: $txt;
+  display: $disp;
+}
+
+@mixin gutter {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+@mixin flexy($dsp: flex, $fdir: null, $fwrap: null, $jcontent: null) {
+  display: $dsp;
+  flex-direction: $fdir;
+  flex-wrap: $fwrap;
+  justify-content: $jcontent;
+}
+
+@mixin section($bradius: 40px 10px, $bshadow: inset 0 0 90px -6px grey) {
+  border-radius: $bradius;
+  box-shadow: $bshadow;
+}
+
+@mixin lrg-screen {
+  width: 80%;
+  max-width: 1080px;
+}

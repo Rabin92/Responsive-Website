@@ -1,0 +1,24 @@
+/* ********************************* Image ********************************* */
+
+img {
+  max-width: 100%;
+}
+
+.col-img {
+  border-radius: 8px;
+}
+
+.skills-img {
+  transition: transform 0.5s;
+  transition-timing-function: ease-in-out;
+  &:hover {
+    transform: scale(1.1) translateY(20px);
+  }
+}
+
+.p-image {
+  padding: 10px;
+  background-color: lighten($b-color, 60%);
+  border: 1.2px solid $b-color;
+  border-radius: 3px;
+}
