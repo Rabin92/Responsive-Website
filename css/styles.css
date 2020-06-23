@@ -464,7 +464,11 @@ main {
   padding: 5px 0;
   background-color: #6495ed;
   color: #fdf5e6;
+  -webkit-transition: background 0.5s, border-radius 0.5s, 0.2s;
+  -o-transition: background 0.5s, border-radius 0.5s, 0.2s;
   transition: background 0.5s, border-radius 0.5s, 0.2s;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
 }
 .nav-items:hover {
@@ -529,6 +533,8 @@ main {
 .skills {
   display: flex;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-top: 30px;
   background-color: lightslategrey;
@@ -542,12 +548,14 @@ main {
 
 @media (min-width: 769px) {
   .col {
+    -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
     padding: 20px 1em 0 1em;
   }
 }
 @media (min-width: 1024px) {
   .col {
+    -ms-flex-preferred-size: 33.333%;
     flex-basis: 33.333%;
   }
 }
@@ -567,10 +575,18 @@ img {
 }
 
 .skills-img {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
   transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
 }
 .skills-img:hover {
+  -webkit-transform: scale(1.1) translateY(20px);
+  -ms-transform: scale(1.1) translateY(20px);
   transform: scale(1.1) translateY(20px);
 }
 
@@ -629,6 +645,7 @@ img {
 /* ***************************** HORIZONTAL LINE **************************** */
 hr {
   border: 1px solid #fffaf0;
+  -webkit-box-shadow: 0 8px 6px -6px black;
   box-shadow: 0 8px 6px -6px black;
 }
 
